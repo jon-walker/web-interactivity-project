@@ -3171,5 +3171,11 @@ var _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator 
             return e = $("#home-img").slippry(), !1;
         });
     });
-});
+}), function(e, t, n, r, i, o, s) {
+    e.GoogleAnalyticsObject = i, e[i] = e[i] || function() {
+        (e[i].q = e[i].q || []).push(arguments);
+    }, e[i].l = 1 * new Date(), o = t.createElement(n), s = t.getElementsByTagName(n)[0], 
+    o.async = 1, o.src = "https://www.google-analytics.com/analytics.js", s.parentNode.insertBefore(o, s);
+}(window, document, "script", 0, "ga"), ga("create", "UA-104388629-2", "auto"), 
+ga("send", "pageview");
 //# sourceMappingURL=main-min.js.map
