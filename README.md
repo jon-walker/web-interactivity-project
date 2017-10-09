@@ -3,7 +3,7 @@ Checkpoint 2 Frontend Code
 
 ##Resources Used
 
-[Hamburger Menu Code}(https://codepen.io/g13nn/pen/eHGEF)
+[Hamburger Menu Code](https://codepen.io/g13nn/pen/eHGEF)
 
 [Slippry jQuery gallery](http://slippry.com/)
 
