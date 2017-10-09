@@ -1,7 +1,7 @@
 # web-interactivity-project
 Checkpoint 2 Frontend Code
 
-##Resources Used
+## Resources Used
 
 [Hamburger Menu Code](https://codepen.io/g13nn/pen/eHGEF)
 
