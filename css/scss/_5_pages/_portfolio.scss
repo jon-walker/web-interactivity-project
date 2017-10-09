@@ -1,0 +1,102 @@
+/* ------------------------- PORTFOLIO INDEX----------------------------*/
+
+.portfolio-section {
+    position: relative;
+
+    p {
+        padding: 0;
+        overflow: hidden;
+        height: 300px;
+    }
+
+    h3 {
+        position: absolute;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        font-size: 1.7rem;
+        font-weight: 700;
+        color: #fff;
+
+        a:link {
+            color: #fff;
+            text-shadow: 0 1px 5px rgba(20, 20, 20, 0.7);
+        }
+    }
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $navy-blue;
+        opacity: 0.5;
+    }
+    a:hover h3 {
+        color: $navy-blue;
+        background-color: rgba(255, 255, 255, 0.5);
+        z-index: map-get($zindex, hoverfx-title);
+        transform: translateY(20px);
+        transition: transform .75s ease, background-color .75s ease;
+    }
+
+    a {
+        grid-column: 1 / 7;
+    }
+}
+
+a:hover .portfolio-section p img {
+    transform: scale(1.1,1.1);
+    transition: transform .75s ease-in-out;
+    z-index: map-get($zindex, hoverfx-img)
+}
+
+
+@media (min-width: map-get($breakpoints, large-mobile)) {
+    .portfolio-container {
+
+        a:nth-child(even) {
+            grid-column: 4 / 7;
+        }
+
+        a:nth-child(odd) {
+            grid-column: 1 / 4;
+        }
+    }
+
+    .portfolio-section h3 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (min-width: map-get($breakpoints, smaller-screen)) {
+    .instructions {
+        text-align: center;
+    }
+
+    .portfolio-container {
+
+        a:nth-child(3n + 1) {
+            grid-column: 1 / 3;
+        }
+
+        a:nth-child(3n + 2) {
+            grid-column: 3 / 5;
+        }
+
+        a:nth-child(3n + 3) {
+            grid-column: 5 / 7;
+        }
+
+    }
+    .portfolio-section h3 {
+        font-size: 2.2rem;
+    }
+}

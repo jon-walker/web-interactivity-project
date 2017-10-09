@@ -1,0 +1,78 @@
+/* ------------------- CONTACT ---------------------*/
+
+.contact__headline {
+    grid-column: 1 / span 12;
+    text-align: center;
+    width: 96%;
+    background-image: url(../img/blue-bkg.jpg);
+    color: white;
+    padding: 8% 2%;
+}
+
+form {
+    grid-column: 1 / span 12;
+    margin: 10% auto;
+    /* Grid settings */
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr 1fr 4fr;
+    grid-row-gap: 30px;
+    grid-column-gap: 10px;
+    align-items: start;
+
+    input,
+    textarea {
+        border: solid 1px #cdcdcd;
+        padding: 2%;
+        width: 100%;
+        grid-column: 2 / 3;
+    }
+
+    label {
+        text-align: right;
+        grid-column: 1 / 2;
+    }
+    #name,
+    .name {
+        grid-row: 1 / 2;
+    }
+
+    #phone,
+    .phone {
+        grid-row: 2 / 3;
+    }
+
+    #email,
+    .email {
+        grid-row: 3 / 4;
+    }
+
+    #msg,
+    .msg {
+        grid-row: 4 / 5;
+    }
+    #msg {
+        align-self: stretch;
+    }
+
+    #submit {
+        grid-row: 5 / 6;
+    }
+    .align-rt {
+        margin-right: 0;
+        justify-self: end;
+    }
+
+}
+
+@media (min-width: 550px) {
+    form {
+        grid-template-columns: 1fr 5fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    form {
+        margin-top: 6%;
+    }
+}

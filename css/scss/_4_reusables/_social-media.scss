@@ -1,0 +1,13 @@
+/*------------ SOCIAL-MEDIA -------------*/
+
+ul.social-media {
+    @include no-bullets;
+
+    li {
+        @include line-across(1%);
+    }
+}
+
+path.social-media__icons {
+    fill: $navy-blue;
+}

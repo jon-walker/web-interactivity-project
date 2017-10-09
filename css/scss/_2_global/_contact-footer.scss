@@ -1,0 +1,114 @@
+/* -------------------- CONTACT BAR ---------------------- */
+
+.contact-bar {
+    padding: 4% 2% 12%;
+    background-color: $navy-blue;
+    width: 96%;
+
+    h2 {
+        animation: slidein .75s ease-in;
+        color: #fff;
+        text-align: left;
+
+        a:link {
+            color: #fff;
+            text-decoration: none;
+            border-bottom: solid 3px $yellow;
+        }
+
+        a:hover {
+            border-bottom: solid 2px $yellow;
+            font-weight: 300;
+        }
+    }
+
+    ul {
+        margin: 4% auto;
+        padding: 4% 2% 6%;
+
+        li {
+            font-size: 1.2rem;
+            color: #fff;
+            @include no-bullets;
+            padding: 2%;
+
+            &.space {
+                padding-top: 0; /* Allows both lines of address to be clustered together */
+            }
+        }
+    }
+}
+
+/* --- Contact Icons ----- */
+
+.phone-icon::before {
+    /* Adding the svg as content made it difficult to scale up or down. This allows the icons to grow/shrink with viewport */
+    content: "";
+    background-image: url(../img/icons/phone.svg);
+    background-size: cover;
+    display: inline-block;
+    width: 1.2rem; /* Make width & height based on text size*/
+    height: 1.2rem;
+    margin-right: 4%;
+}
+
+.email-icon::before {
+    content: "";
+    background-image: url(../img/icons/envelope.svg);
+    background-size: cover;
+    display: inline-block;
+    width: 1.2rem; /* Make width & height based on text size*/
+    height: 1.2rem;
+    margin-right: 4%;
+}
+.address-icon::before {
+    content: "";
+    background-image: url(../img/icons/location.svg);
+    background-size: cover;
+    display: inline-block;
+    width: 1.2rem; /* Make width & height based on text size*/
+    height: 1.2rem;
+    margin-right: 4%;
+}
+.space:before {
+    content: "";
+    background-color: rgba(255, 255, 255, 0);
+    background-size: cover;
+    display: inline-block;
+    width: 1.2rem; /* Make width & height based on text size*/
+    height: 1.2rem;
+    margin-right: 4%;
+}
+
+@media (min-width: map-get($breakpoints, portrait)) {
+
+    .contact-bar {
+        display: flex;
+        align-content: center;
+        align-items: flex-start;
+        padding-top: 10%;
+
+        h2 {
+            margin-top: 4%;
+            width: 45%;
+            text-align: right;
+        }
+
+        ul {
+            width: 45%;
+        }
+    }
+}
+
+@keyframes slidein {
+
+    0% {
+        opacity: 0;
+        margin-right: 15%;
+    }
+    100% {
+        opacity: 1;
+        margin-right: 0;
+    }
+
+}

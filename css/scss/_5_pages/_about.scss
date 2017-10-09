@@ -1,0 +1,47 @@
+/* ------------------------- ABOUT ------------------------------*/
+
+.client{
+    background-color: $navy-blue;
+    grid-column: 1 / 13;
+    width: 96%;
+    padding: 2%;
+
+    h2 {
+        padding: 4% 2%;
+        color: #fff;
+    }
+}
+
+.client-list {
+    @include no-bullets;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8%;
+
+    li {
+        @include line-across(2%);
+        flex: 1 1;
+    }
+}
+
+@media (min-width: map-get($breakpoints, smaller-screen)) {
+
+    .shift-left {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 0;
+    }
+
+    .team-flex-container {
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+    .team_box {
+        width: 250px;
+        flex: 1;
+        margin-bottom: 8%;
+    }
+}

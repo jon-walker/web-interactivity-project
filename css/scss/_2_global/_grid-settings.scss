@@ -1,0 +1,67 @@
+/*------------------- GRID-SETTINGS --------------------*/
+
+body {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+    background-color: rgba(255,255,255,1);
+    justify-items: center;
+}
+
+// Will default to full viewport width for mobile sizes. Use media queries on individual page .scss files to adjust layouts for other screen sizes.
+section,
+article,
+footer,
+.contact-bar,
+.side-stories {
+    grid-column: 1 / span 12;
+    position: relative;
+}
+
+@media (min-width: map-get($breakpoints, smaller-screen)) {
+    .home-intro {
+        grid-column: 2 / 12;
+        max-width: 750px; /* Prevents side img's from straying too far */
+    }
+}
+
+@media (min-width: map-get($breakpoints, smaller-screen)) {
+    .about-intro {
+        grid-column: 1 / 13;
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        grid-column-gap: 2%;
+        align-items: center;
+        margin-top: 10%;
+    }
+    /* Set 1 */
+    .left-two-thirds {
+        grid-column: 1 / 2;
+        overflow: hidden;
+
+        img {
+            max-width: initial; //Allows img to fill entire heightof container.
+        }
+    }
+
+    .right-third {
+        grid-column: 2 / 4;
+
+        h2,
+        p {
+            width: 70%;
+            margin: auto;
+            text-align: left;
+        }
+    }
+
+    .row-two {
+        grid-row: 2 / 3;
+    }
+
+}
+@media (min-width: map-get($breakpoints, regular)) {
+    .about-intro {
+        margin-top: 6%;
+    }
+}

@@ -1,0 +1,32 @@
+
+/* ------------------ INDIVIDUAL BLOG POSTS ------------------------------*/
+.post {
+    grid-column: 1 / span 12;
+    margin-top: 15%;
+
+}
+.blog-sidebar {
+    color: #fff;
+    padding: 2%;
+    background-color: $navy-blue;
+    grid-column: 1 / span 12;
+    margin: 4% auto;
+}
+
+@media (min-width: map-get($breakpoints, smaller-screen)) {
+    .post {
+        grid-column: 3 / span 6;
+        margin-top: 16%;
+        margin-bottom: 10%;
+    }
+
+    .blog-sidebar {
+        grid-column: 10 / 12;
+        background-color: $navy-blue;
+        margin-top: 70%;
+        align-self: start;
+        padding: 2%;
+    }
+}
+
+// @media (min-width: map-get($breakpoints, large-mobile)) {

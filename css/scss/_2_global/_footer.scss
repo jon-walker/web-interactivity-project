@@ -1,0 +1,12 @@
+/* ----------------------- FOOTER --------------------------- */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p, ul {
+        font-size: 0.9rem;
+        width: 33%;
+        text-align: center;
+    }
+}

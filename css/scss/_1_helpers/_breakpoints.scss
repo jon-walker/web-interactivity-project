@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    #BREAKPOINTS
+\*------------------------------------*/
+
+$breakpoints: (
+	regular: 1200px,
+	medium: 1024px,
+	smaller-screen: 800px,
+	portrait: 768px,
+	small: 640px,
+	large-mobile: 475px,
+	mobile: 360px
+);
+
+@mixin breakpoint($device) {
+	// inside breakpoints list
+	@if map-has-key($breakpoints, $device) {
+		@media (min-width: #{map-get($breakpoints, $device)}) {
+			@content;
+		}
+	}
+	// retina
+	@else if $device == 'retina' {
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+			@content;
+		}
+	}
+
+	// not found
+	@else {
+		@warn "Unfortunately, no value could be retrieved from `#{$device}`. "
+        	+ "Please make sure it is defined in `$breakpoints` map.";
+	}
+}

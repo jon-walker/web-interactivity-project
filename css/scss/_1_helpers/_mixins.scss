@@ -1,0 +1,61 @@
+/*------------------------------------*\
+    #MIXINS
+
+	- remove-text
+	- no-bullets
+	- no-margin-padding
+	- circle
+	- clearfix
+	- blend-mode
+	- arrow
+	- hamburger
+	- aspect-ratio
+
+\*------------------------------------*/
+
+/* Adds subtle movement and shadows to mimic half-push */
+
+@mixin button-fx($btn-color) {
+    background-color: $btn-color;
+    box-shadow: 0 1px 7px rgba(20, 20, 20, 0.6);
+    transform: translateY(3px);
+    transition: transform 0.25s ease-in-out, background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+
+/* Line Up Horizontal */
+
+@mixin line-across($spacing) {
+    display: inline;
+    padding-left: $spacing;
+    padding-right: $spacing;
+}
+
+/* Removes Bullets from ul (From Web Interactivity Example) */
+@mixin no-bullets() {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/*
+ * CLEARFIX
+ * Should be placed on the container, wrapping item
+ * https://rachelandrew.co.uk/archives/2017/01/24/the-end-of-the-clearfix-hack/
+ */
+
+@mixin clearfix() {
+
+    &:after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+
+    @supports (display: flow-root) {
+        display: flow-root;
+
+        &:after {
+            display: none;
+        }
+    }
+}

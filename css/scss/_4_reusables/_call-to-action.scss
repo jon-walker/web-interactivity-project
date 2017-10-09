@@ -1,0 +1,46 @@
+/* ----------------- CALLS TO ACTION ------------------*/
+
+.call-to-action {
+    padding: 4%;
+    width: 96%;
+    border-radius: 5px;
+    background-color: $yellow;
+    margin: 10% 2%;
+    color: $navy-blue;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+
+    &:hover,
+    &:active {
+        @include button-fx($yellow);
+        color: #fff;
+    }
+}
+
+@media (min-width: map-get($breakpoints, small)) {
+
+    .call-to-action {
+        width: 35%;
+        max-width: 200px;
+        float: right;
+        margin: 5% 8%; /* NEEDS ADJUSTMENTS STILL */
+        padding: 3%;
+    }
+}
+
+@media (min-width: map-get($breakpoints, portrait)) {
+
+    .call-to-action {
+        margin: 4% 10%; /* NEEDS ADJUSTMENTS STILL */
+        padding: 2%;
+    }
+}
+
+@media (min-width: map-get($breakpoints, smaller-screen)) {
+
+    .call-to-action {
+        margin: 4% 10%; /* NEEDS ADJUSTMENTS STILL */
+        padding: 1%;
+    }
+}
